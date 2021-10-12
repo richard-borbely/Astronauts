@@ -1,0 +1,62 @@
+﻿@page
+@model Astronauts.Pages.AstronautFolder.EditModel
+
+<br />
+<h2 class="text-info"> Edit Astronaut</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <input type="hidden" asp-for="Astronaut.Id" />
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Astronaut.Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Astronaut.Name" class="form-control" />
+            </div>
+            <span asp-validation-for="Astronaut.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Astronaut.Surname"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Astronaut.Surname" class="form-control" />
+            </div>
+            <span asp-validation-for="Astronaut.Surname" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Astronaut.Date"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Astronaut.Date" class="form-control" />
+            </div>
+            <span asp-validation-for="Astronaut.Date" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Astronaut.Superpower"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Astronaut.Superpower" class="form-control" />
+            </div>
+            <span asp-validation-for="Astronaut.Superpower" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-4">
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
